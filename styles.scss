@@ -33,3 +33,14 @@ body {
 		background-color: $odd-background;
 	}
 }
+
+.center {
+	text-align: center;
+}
+
+.btn {
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
