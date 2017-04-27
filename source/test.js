@@ -5,9 +5,9 @@ import { Stream } from './stream';
 
 const layout = document.getElementById('layout');
 
-const list1 = createList('List 1', layout);
-const list2 = createList('List 2', layout);
-const list3 = createList('List 3', layout);
+const list1 = createList('Source 1', layout);
+const list2 = createList('Target', layout);
+const list3 = createList('Source 2', layout);
 
 for (let i = 0; i < 5; i++) {
 	createItem(false, 'A' + i, list1);
