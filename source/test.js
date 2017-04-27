@@ -1,10 +1,13 @@
 import { document } from './browser';
+import { createList } from './list';
 import { createListItem } from './listItem';
 import { Stream } from './stream';
 
-const list1 = document.getElementById('list1');
-const list2 = document.getElementById('list2');
-const list3 = document.getElementById('list3');
+const layout = document.getElementById('layout');
+
+const list1 = createList('List 1', layout);
+const list2 = createList('List 2', layout);
+const list3 = createList('List 3', layout);
 
 for (let i = 0; i < 5; i++) {
 	createItem(false, 'A' + i, list1);

@@ -13,7 +13,7 @@ export function createListItem(isOdd, content, list) {
 	let div = document.createElement('div');
 	div.setAttribute('class', classes);
 	div.innerText = content;
-	list.appendChild(div);
+	list.element.appendChild(div);
 
 	item.element = div;
 
