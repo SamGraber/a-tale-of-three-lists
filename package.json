@@ -17,5 +17,8 @@
     "style-loader": "^0.16.1",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "rxjs": "^5.3.0"
   }
 }
