@@ -16,4 +16,8 @@ export class List {
 	add(listItem) {
 		this.element.appendChild(listItem.element);
 	}
+
+	remove(listItem) {
+		this.element.removeChild(listItem.element);
+	}
 }

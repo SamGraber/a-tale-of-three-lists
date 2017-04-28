@@ -2,10 +2,11 @@ import { document } from './browser';
 import { List } from './list';
 import { Stream } from './stream';
 import { ListItem } from './listItem';
+import { setupItemControl } from './itemControl';
 import { nextId } from './nextId';
 
 export class DataList {
-	constructor(header, isOdd) {
+	constructor(header, isOdd, target) {
 		this._list = new List(header);
 		this._stream = new Stream();
 
@@ -15,6 +16,8 @@ export class DataList {
 			const id = nextId();
 			let item = new ListItem(isOdd, 'Item ' + id);
 			item.list = this;
+			item.targetList = target;
+			setupItemControl(item);
 			this.add(item);
 		});
 
@@ -41,5 +44,9 @@ export class DataList {
 
 	add(listItem) {
 		this._list.add(listItem);
+	}
+
+	remove(listItem) {
+		this._list.remove(listItem);
 	}
 }

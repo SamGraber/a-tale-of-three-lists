@@ -6,9 +6,9 @@ import { Stream } from './stream';
 
 const layout = document.getElementById('layout');
 
-const list1 = new DataList('Source 1', false);
 const list2 = new List('Target');
-const list3 = new DataList('Source 2', true);
+const list1 = new DataList('Source 1', false, list2);
+const list3 = new DataList('Source 2', true, list2);
 
 layout.appendChild(list1.element);
 layout.appendChild(list2.element);
